@@ -23,11 +23,12 @@ export async function GeminiSummary({ gameId }) {
 
   try {
     if (!process.env.GEMINI_API_KEY) { // Check if the Gemini API key is set in environment variables
-      // Make sure GEMINI_API_KEY environment variable is set:
-      // https://firebase.google.com/docs/genkit/get-started
-      throw new Error(
-        'GEMINI_API_KEY not set. Set it with "firebase apphosting:secrets:set GEMINI_API_KEY"'
-      ); // Throw an error if the API key is missing
+      // Return a simple message instead of throwing an error
+      return (
+        <div className="game__review_summary">
+          <p>AI review summary is not available. Please set up GEMINI_API_KEY to enable AI summaries.</p>
+        </div>
+      );
     }
 
     // Configure a Genkit instance.
