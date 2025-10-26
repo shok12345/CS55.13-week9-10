@@ -9,8 +9,8 @@ import ReviewsList, {
   ReviewsListSkeleton,
 } from "@/src/components/Reviews/ReviewsList";
 import {
-  GeminiSummary,
-  GeminiSummarySkeleton,
+  GameSummary,
+  GameSummarySkeleton,
 } from "@/src/components/Reviews/ReviewSummary";
 import { getFirestore } from "firebase/firestore";
 
@@ -33,8 +33,8 @@ export default async function Home(props) {
         initialGame={game}
         initialUserId={currentUser?.uid || ""}
       >
-        <Suspense fallback={<GeminiSummarySkeleton />}>
-          <GeminiSummary gameId={params.id} />
+        <Suspense fallback={<GameSummarySkeleton />}>
+          <GameSummary gameId={params.id} />
         </Suspense>
       </Game>
       <Suspense
