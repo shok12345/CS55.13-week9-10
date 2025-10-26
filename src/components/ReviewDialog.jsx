@@ -13,7 +13,7 @@ const ReviewDialog = ({
   review, // Review object containing text
   onChange, // Function to handle text input changes
   userId, // ID of the user submitting the review
-  id, // ID of the restaurant being reviewed
+  id, // ID of the game being reviewed
 }) => {
   const dialog = useRef(); // Create a ref to access the dialog DOM element
 
@@ -59,7 +59,7 @@ const ReviewDialog = ({
             />
           </p>
 
-          <input type="hidden" name="restaurantId" value={id} /> {/* Hidden input for restaurant ID */}
+          <input type="hidden" name="gameId" value={id} /> {/* Hidden input for game ID */}
           <input type="hidden" name="userId" value={userId} /> {/* Hidden input for user ID */}
         </article>
         <footer>
