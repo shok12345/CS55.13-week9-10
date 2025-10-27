@@ -462,7 +462,7 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  color: rgba(0, 0, 0, 0.2);
+  color: rgba(66, 26, 26, 0.2);
   background: linear-gradient(
     90deg,
     gold var(--percent),
